@@ -13,7 +13,10 @@ class Item extends StatelessWidget {
         item.p.startsWith('-') ? Colors.red : Colors.green;
 
     return Material(
-      elevation: 4.0, // Set the elevation value as needed
+      elevation: 4.0,
+      shadowColor: Theme.of(context)
+          .colorScheme
+          .secondary, // Set the elevation value as needed
       borderRadius: BorderRadius.circular(8.0), // Match the border radius
       child: Container(
         padding: EdgeInsets.all(8.0),
@@ -25,6 +28,7 @@ class Item extends StatelessWidget {
         child: Row(
           children: [
             Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -34,7 +38,7 @@ class Item extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: Theme.of(context).colorScheme.inversePrimary),
                 ),
-                SizedBox(height: 4.0),
+                SizedBox(height: 16.0),
                 Text(
                   '\₹${item.c}',
                   style: TextStyle(

@@ -175,8 +175,8 @@ class _HomePageState extends State<HomePage> {
                       child: GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10,
+                          crossAxisSpacing: 15,
+                          mainAxisSpacing: 25,
                         ),
                         padding: EdgeInsets.all(8),
                         itemCount: coinMarket?.length ?? 0,
