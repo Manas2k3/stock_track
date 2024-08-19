@@ -12,43 +12,48 @@ class Item extends StatelessWidget {
     Color percentChangeColor =
         item.p.startsWith('-') ? Colors.red : Colors.green;
 
-    return Container(
-      padding: EdgeInsets.all(8.0),
-      decoration: BoxDecoration(
-        border: Border.all(color: Theme.of(context).colorScheme.inversePrimary),
-        borderRadius: BorderRadius.circular(8.0),
-      ),
-      child: Row(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '${item.s}',
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.inversePrimary),
-              ),
-              SizedBox(height: 4.0),
-              Text(
-                '\₹${item.c}',
-                style: TextStyle(
-                    fontSize: 16,
-                    color: Theme.of(context).colorScheme.inversePrimary),
-              ),
-              SizedBox(height: 4.0),
-              Text(
-                '${item.p}%',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: percentChangeColor,
-                  fontWeight: FontWeight.bold,
+    return Material(
+      elevation: 4.0, // Set the elevation value as needed
+      borderRadius: BorderRadius.circular(8.0), // Match the border radius
+      child: Container(
+        padding: EdgeInsets.all(8.0),
+        decoration: BoxDecoration(
+          border:
+              Border.all(color: Theme.of(context).colorScheme.inversePrimary),
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+        child: Row(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '${item.s}',
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.inversePrimary),
                 ),
-              ),
-            ],
-          ),
-        ],
+                SizedBox(height: 4.0),
+                Text(
+                  '\₹${item.c}',
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Theme.of(context).colorScheme.inversePrimary),
+                ),
+                SizedBox(height: 4.0),
+                Text(
+                  '${item.p}%',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: percentChangeColor,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
