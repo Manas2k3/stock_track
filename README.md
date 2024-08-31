@@ -54,3 +54,6 @@ flutter run
 2. **WebSocket API:** Used to fetch real-time cryptocurrency data.
 3. **Provider:** State management solution for managing theme changes.
 4. **Google Fonts:** For custom font styling in the app.
+
+
+[Watch the Working Video Clip](https://github.com/user-attachments/assets/a5872fb8-1f0d-4326-8f98-eab1b8dcf419)
